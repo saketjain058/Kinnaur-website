@@ -7,6 +7,7 @@ const IMG = (name) => `assets/images/${name}`;
 /* ---- Data ---- */
 const packages = [
   {
+    id: "chandigarh-kinnaur-spiti-manali",
     duration: "9 Nights / 10 Days",
     title: "Chandigarh – Kinnaur – Spiti – Manali – Chandigarh",
     stops: ["Chandigarh", "Kalpa", "Kaza", "Manali"],
@@ -15,6 +16,7 @@ const packages = [
     img: "kalpa-village.jpg",
   },
   {
+    id: "shimla-kinnaur-spiti-manali",
     duration: "7 Nights / 8 Days",
     title: "Shimla – Kinnaur – Spiti – Manali",
     stops: ["Shimla", "Sangla", "Kaza", "Manali"],
@@ -23,6 +25,7 @@ const packages = [
     img: "sangla-valley.jpg",
   },
   {
+    id: "chandigarh-kinnaur-spiti-chandratal",
     duration: "8 Nights / 9 Days",
     title: "Chandigarh – Kinnaur – Spiti – Chandigarh",
     stops: ["Chandigarh", "Kalpa", "Kaza", "Chandratal"],
@@ -60,6 +63,13 @@ function avatarColor(name) {
 }
 const initials = (n) => n.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
 
+/* ---- Build checkout link from a package (price string -> number) ---- */
+function checkoutUrl(p) {
+  const price = parseInt(String(p.price).replace(/[^\d]/g, ""), 10) || 0;
+  const q = new URLSearchParams({ pkg: p.title, price, meta: p.duration, img: IMG(p.img) });
+  return "checkout.html?" + q.toString();
+}
+
 /* ---- Renderers ---- */
 function renderPackages() {
   document.getElementById("pkgGrid").innerHTML = packages.map((p) => `
@@ -76,7 +86,10 @@ function renderPackages() {
         <p class="pkg__desc">${p.desc}</p>
         <div class="pkg__foot">
           <div class="pkg__price"><b class="tnum">${p.price}</b><span>per person</span></div>
-          <a href="package-detail.html" class="btn btn--primary btn--sm">View Details ${arrow}</a>
+          <div class="pkg__actions">
+            <a href="package-detail.html?id=${p.id}" class="btn btn--outline btn--sm">Details</a>
+            <a href="${checkoutUrl(p)}" class="btn btn--primary btn--sm">Book Now ${arrow}</a>
+          </div>
         </div>
       </div>
     </article>`).join("");

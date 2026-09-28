@@ -6,7 +6,7 @@
   <title>Kinnaur Valley Tour — Incredible Kinnaur Holidays</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -32,6 +32,7 @@
         <a href="gallery.html" data-nav="gallery">Gallery</a>
         <a href="blog.html" data-nav="blog">Blog</a>
         <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="contact.html" class="nav-cta">Enquire Now</a>
       </nav>
 
       <a href="contact.html" class="btn btn--primary btn--sm">
@@ -49,7 +50,7 @@
     <div class="container">
       <a href="index.html">Home</a><span class="sep">/</span>
       <a href="packages.html">Tour Packages</a><span class="sep">/</span>
-      <span class="current">Kinnaur Valley Tour</span>
+      <span class="current" id="crumbTitle">Kinnaur Valley Tour</span>
     </div>
   </div>
 
@@ -58,7 +59,7 @@
       <div class="detail-grid">
         <div>
           <div class="gallery-main"><img id="galleryMain" src="assets/images/kalpa-village.jpg" alt="Kinnaur Valley Tour"></div>
-          <div class="gallery-thumbs">
+          <div class="gallery-thumbs" id="galleryThumbs">
             <img class="active" src="assets/images/kalpa-village.jpg" alt="Kalpa Village">
             <img src="assets/images/sangla-valley.jpg" alt="Sangla Valley">
             <img src="assets/images/chitkul-village.jpg" alt="Chitkul Village">
@@ -69,19 +70,19 @@
 
           <div class="detail-head">
             <div>
-              <h1 class="h-2">Kinnaur Valley Tour</h1>
+              <h1 class="h-2" id="pkgTitle">Kinnaur Valley Tour</h1>
               <div>
                 <span class="chip">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-                  6 Days 5 Nights
+                  <span id="pkgDuration">6 Days 5 Nights</span>
                 </span>
                 <span class="chip">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Kinnaur, HP
+                  <span id="pkgLocation">Kinnaur, HP</span>
                 </span>
               </div>
             </div>
-            <div class="price"><b>₹18,999</b><span>Per Person</span></div>
+            <div class="price"><b id="pkgPriceTop">₹18,999</b><span>Per Person</span></div>
           </div>
 
           <div class="detail-tabs" data-tabs>
@@ -94,27 +95,14 @@
 
           <div data-panel="overview">
             <h3>Overview</h3>
-            <p class="text-muted">Explore the breathtaking Kinnaur Valley, where snow-capped mountains meet blossoming apple orchards and serene, timeless villages. This journey takes you through Kalpa, Sangla and Chitkul — a perfect blend of untouched nature, warm local culture and gentle Himalayan adventure. Wind along the Sutlej and Baspa rivers, savour apple-country hospitality and wake up to the majestic Kinnaur Kailash range at dawn.</p>
+            <p class="text-muted" id="pkgOverview">Explore the breathtaking Kinnaur Valley, where snow-capped mountains meet blossoming apple orchards and serene, timeless villages.</p>
             <h3>Highlights</h3>
-            <ul class="check-list">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Visit Kinnaur Kailash View Point</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Explore picturesque Sangla Valley</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Experience the last village of India – Chitkul</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Stay in comfortable hotels/homestays</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Guided tours and local experiences</li>
-            </ul>
+            <ul class="check-list" id="pkgHighlights"></ul>
           </div>
 
           <div data-panel="itinerary" style="display:none">
             <h3>Itinerary</h3>
-            <ol>
-              <li style="padding:8px 0;"><b>Day 1:</b> Arrive in Shimla, meet your team, transfer to hotel and enjoy an evening stroll along the Mall Road.</li>
-              <li style="padding:8px 0;"><b>Day 2:</b> Drive to Sarahan via the Sutlej valley; visit the ancient Bhimakali Temple and overnight amid pine forests.</li>
-              <li style="padding:8px 0;"><b>Day 3:</b> Journey to Sangla and on to Chitkul — the last inhabited village near the Indo-Tibet border.</li>
-              <li style="padding:8px 0;"><b>Day 4:</b> Travel to Kalpa; soak in sweeping views of the Kinnaur Kailash range and explore apple orchards.</li>
-              <li style="padding:8px 0;"><b>Day 5:</b> Excursion towards Nako and Tabo, discovering high-altitude lakes and centuries-old monasteries.</li>
-              <li style="padding:8px 0;"><b>Day 6:</b> After breakfast, begin the return drive with a scenic descent and departure with fond memories.</li>
-            </ol>
+            <ol id="pkgItinerary"></ol>
           </div>
 
           <div data-panel="inclusions" style="display:none">
@@ -151,12 +139,12 @@
 
         <aside>
           <div class="book-card">
-            <div class="price" style="margin-bottom:12px;"><b class="tnum" style="font-family:var(--font-serif);font-size:1.8rem;color:var(--color-ink);">₹18,999</b> <span class="text-muted">/ per person</span></div>
-            <div class="row"><span>Duration</span><b>6 Days 5 Nights</b></div>
-            <div class="row"><span>Location</span><b>Kinnaur, HP</b></div>
-            <div class="row"><span>Group Size</span><b>2–12 People</b></div>
-            <div class="row"><span>Best Season</span><b>May – Oct</b></div>
-            <a href="contact.html" class="btn btn--primary">Book Now
+            <div class="price" style="margin-bottom:12px;"><b class="tnum" id="pkgPriceSide" style="font-family:var(--font-serif);font-size:1.8rem;color:var(--color-ink);">₹18,999</b> <span class="text-muted">/ per person</span></div>
+            <div class="row"><span>Duration</span><b id="sideDuration">6 Days 5 Nights</b></div>
+            <div class="row"><span>Location</span><b id="sideLocation">Kinnaur, HP</b></div>
+            <div class="row"><span>Group Size</span><b id="sideGroup">2–12 People</b></div>
+            <div class="row"><span>Best Season</span><b id="sideSeason">May – Oct</b></div>
+            <a href="#" id="bookNowBtn" class="btn btn--primary">Book Now
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
             <a href="contact.html" class="btn btn--outline" style="width:100%;justify-content:center;margin-top:8px;">Enquire Now</a>
@@ -215,6 +203,8 @@
     </div>
   </footer>
 
+  <script src="js/packages-data.js"></script>
+  <script src="js/package-detail.js"></script>
   <script src="js/site.js"></script>
 </body>
 </html>

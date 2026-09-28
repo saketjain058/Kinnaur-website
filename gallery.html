@@ -6,7 +6,7 @@
   <title>Photo Gallery — Incredible Kinnaur Holidays</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -32,6 +32,7 @@
         <a href="gallery.html" data-nav="gallery">Gallery</a>
         <a href="blog.html" data-nav="blog">Blog</a>
         <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="contact.html" class="nav-cta">Enquire Now</a>
       </nav>
 
       <a href="contact.html" class="btn btn--primary btn--sm">
@@ -63,9 +64,19 @@
         <button class="filter" data-filter="villages">Villages</button>
         <button class="filter" data-filter="adventure">Adventure</button>
         <button class="filter" data-filter="culture">Culture</button>
+        <button class="filter" data-filter="transport">Transport</button>
       </div>
 
       <div class="masonry" id="galleryGrid">
+        <figure data-cat="transport adventure">
+          <img src="assets/images/hero-bus.jpg" alt="Tourist coach on a Kinnaur mountain road" loading="lazy">
+        </figure>
+        <figure data-cat="transport adventure">
+          <img src="assets/images/hero-car.jpg" alt="SUV parked in a Himalayan forest" loading="lazy">
+        </figure>
+        <figure data-cat="transport">
+          <img src="assets/images/hero-travellers.jpg" alt="Travellers on a Kinnaur tour" loading="lazy">
+        </figure>
         <figure data-cat="kinnaur villages culture">
           <img src="assets/images/kalpa-village.jpg" alt="" loading="lazy">
         </figure>

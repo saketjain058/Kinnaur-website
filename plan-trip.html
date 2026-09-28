@@ -6,7 +6,7 @@
   <title>Plan Your Trip — Incredible Kinnaur Holidays</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -32,6 +32,7 @@
         <a href="gallery.html" data-nav="gallery">Gallery</a>
         <a href="blog.html" data-nav="blog">Blog</a>
         <a href="contact.html" data-nav="contact">Contact</a>
+        <a href="contact.html" class="nav-cta">Enquire Now</a>
       </nav>
 
       <a href="contact.html" class="btn btn--primary btn--sm">
@@ -50,9 +51,9 @@
     <div class="page-hero__overlay"></div>
     <div class="container">
       <h1>Plan Your Kinnaur Trip Today</h1>
-      <p>Let us help you create unforgettable memories in the lap of the Himalayas.</p>
+      <p>Share your travel dates, group size and budget below. Our team will review your request and get back to you with a tailored plan.</p>
       <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-        <a href="#quote" class="btn btn--gold">Get a Free Quote</a>
+        <a href="#quote" class="btn btn--gold">Plan My Trip</a>
         <a href="packages.html" class="btn btn--ghost">Browse Packages</a>
       </div>
     </div>
@@ -95,12 +96,13 @@
       <div class="contact-grid">
         <div>
           <span class="eyebrow">Tell Us Your Plan</span>
-          <h2 class="h-2">Get a Free Custom Quote</h2>
-          <form class="site-form" novalidate style="margin-top:24px;">
+          <h2 class="h-2">Plan a Custom Trip</h2>
+          <p class="text-muted" style="margin-top:8px;max-width:520px;">Tell us what you have in mind and your budget. We'll review your details and reach out to plan the trip with you &mdash; no obligation.</p>
+          <form class="site-form" novalidate data-success="Thanks! Your trip request has reached our team. We'll review it and contact you soon to plan your journey." style="margin-top:24px;">
             <div class="form-2col">
               <div class="form-field">
                 <label for="fullName">Full Name*</label>
-                <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Your full name" required />
+                <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Saket Jain" required />
               </div>
               <div class="form-field">
                 <label for="email">Email*</label>
@@ -111,7 +113,7 @@
             <div class="form-2col">
               <div class="form-field">
                 <label for="phone">Phone*</label>
-                <input class="form-control" id="phone" name="phone" type="tel" placeholder="+91 82192 09660" required />
+                <input class="form-control" id="phone" name="phone" type="tel" placeholder="10-digit mobile number" required />
               </div>
               <div class="form-field">
                 <label for="travelers">Number of Travelers</label>
@@ -153,7 +155,7 @@
               <textarea class="form-control" id="message" name="message" placeholder="Anything specific you'd like..."></textarea>
             </div>
 
-            <button class="btn btn--primary">Get My Quote <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button class="btn btn--primary">Send Enquiry <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           </form>
         </div>
 

@@ -6,6 +6,9 @@
 * { margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
+/* clip the off-screen mobile drawer (translateX(100%)) so it can't create
+   horizontal scroll when closed */
+html, body { overflow-x: clip; }
 
 body {
   font-family: var(--font-sans);

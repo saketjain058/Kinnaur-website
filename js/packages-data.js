@@ -1,0 +1,267 @@
+/* ============================================
+   Package catalogue — single source of truth.
+   Used by package-detail.js (and available to any
+   page that includes this file). Keyed by slug.
+   ============================================ */
+
+const PACKAGES = {
+  /* ---- Grand circuits (featured on the home page) ---- */
+  "chandigarh-kinnaur-spiti-manali": {
+    title: "Chandigarh – Kinnaur – Spiti – Manali – Chandigarh",
+    price: 55000,
+    duration: "9 Nights / 10 Days",
+    location: "Kinnaur & Spiti",
+    group: "2–12 People",
+    season: "Jun – Sep",
+    hero: "assets/images/kalpa-village.jpg",
+    gallery: ["kalpa-village.jpg", "kaza-spiti.jpg", "chandratal-lake.jpg", "chitkul-village.jpg", "mirror-lake.jpg", "hero-kinnaur-valley.jpg"],
+    overview: "The complete Himalayan circuit — a grand 10-day loop from Chandigarh through the green apple valleys of Kinnaur, across the stark high-desert of Spiti, and out via Manali. Scenic drives, ancient monasteries, riverside villages and star-lit high-altitude camps make this the definitive Kinnaur–Spiti road trip.",
+    highlights: [
+      "Full Chandigarh → Kinnaur → Spiti → Manali loop",
+      "Chitkul, Kalpa, Tabo, Kaza & Key Monastery",
+      "Overnight camp at Chandratal Lake",
+      "World's highest post office at Hikkim",
+      "Cross Kunzum & Rohtang passes",
+    ],
+    itinerary: [
+      ["Day 1", "Arrive in Chandigarh, meet your team, overnight stay and trip briefing."],
+      ["Day 2", "Drive to Sarahan via Shimla and the Sutlej valley, visit Bhimakali Temple."],
+      ["Day 3", "Continue to Sangla and Chitkul in the beautiful Baspa valley."],
+      ["Day 4", "Travel to Kalpa for Kinnaur Kailash views and apple orchards."],
+      ["Day 5", "Kalpa to Nako via Khab, arid high-mountain scenery."],
+      ["Day 6", "Nako to Kaza, visiting the 1,000-year-old Tabo Monastery en route."],
+      ["Day 7", "Explore Key, Kibber, Langza, Komic and Hikkim above the Spiti river."],
+      ["Day 8", "Kaza to Chandratal, overnight camp beside the lake at 4,300m."],
+      ["Day 9", "Chandratal to Manali via Kunzum & Rohtang passes."],
+      ["Day 10", "Depart from Manali with unforgettable memories."],
+    ],
+  },
+
+  "shimla-kinnaur-spiti-manali": {
+    title: "Shimla – Kinnaur – Spiti – Manali",
+    price: 45000,
+    duration: "7 Nights / 8 Days",
+    location: "Kinnaur & Spiti",
+    group: "2–12 People",
+    season: "Jun – Sep",
+    hero: "assets/images/sangla-valley.jpg",
+    gallery: ["sangla-valley.jpg", "kaza-spiti.jpg", "chandratal-lake.jpg", "chitkul-village.jpg", "kalpa-village.jpg", "temple-peak.jpg"],
+    overview: "A perfectly-paced 8-day itinerary experiencing the best of Kinnaur and Spiti with comfortable travel and stays. Begin in Shimla, wind through Sangla and Kalpa, cross into the Spiti valley's timeless monasteries, and finish over the high passes into Manali.",
+    highlights: [
+      "Shimla → Kinnaur → Spiti → Manali route",
+      "Sangla, Kalpa & the Baspa valley",
+      "Key Monastery and Kaza's high villages",
+      "Chandratal Lake high-altitude camp",
+      "Comfortable hotels & homestays throughout",
+    ],
+    itinerary: [
+      ["Day 1", "Arrive in Shimla, evening stroll on the Mall Road, overnight stay."],
+      ["Day 2", "Shimla to Sangla via the Sutlej and Baspa valleys."],
+      ["Day 3", "Day trip to Chitkul, the last village, return to Sangla."],
+      ["Day 4", "Sangla to Kalpa, Kinnaur Kailash views and apple orchards."],
+      ["Day 5", "Kalpa to Kaza via Nako and Tabo Monastery."],
+      ["Day 6", "Explore Key, Kibber, Langza and Hikkim around Kaza."],
+      ["Day 7", "Kaza to Chandratal, overnight camp beside the lake."],
+      ["Day 8", "Chandratal to Manali via Kunzum & Rohtang passes, tour ends."],
+    ],
+  },
+
+  "chandigarh-kinnaur-spiti-chandratal": {
+    title: "Chandigarh – Kinnaur – Spiti – Chandigarh",
+    price: 55000,
+    duration: "8 Nights / 9 Days",
+    location: "Kinnaur & Spiti",
+    group: "2–12 People",
+    season: "Jun – Sep",
+    hero: "assets/images/mirror-lake.jpg",
+    gallery: ["mirror-lake.jpg", "chandratal-lake.jpg", "kaza-spiti.jpg", "chitkul-village.jpg", "kalpa-village.jpg", "hero-kinnaur-valley.jpg"],
+    overview: "Explore the magical landscapes of Kinnaur and Spiti including the stunning Chandratal, on a 9-day round trip from Chandigarh. This circuit balances the green orchards of Kinnaur with the moon-like high desert of Spiti before returning via the same gateway city.",
+    highlights: [
+      "Round trip from Chandigarh",
+      "Kinnaur Kailash, Kalpa & Chitkul",
+      "Spiti's Tabo & Key monasteries",
+      "The surreal Chandratal Lake",
+      "Scenic drives across high passes",
+    ],
+    itinerary: [
+      ["Day 1", "Arrive in Chandigarh, briefing and overnight stay."],
+      ["Day 2", "Drive to Sarahan via Shimla, visit Bhimakali Temple."],
+      ["Day 3", "Continue to Sangla and Chitkul in the Baspa valley."],
+      ["Day 4", "Travel to Kalpa, Kinnaur Kailash views and orchards."],
+      ["Day 5", "Kalpa to Kaza via Nako and Tabo Monastery."],
+      ["Day 6", "Explore Key, Kibber, Langza and Hikkim."],
+      ["Day 7", "Kaza to Chandratal, overnight lakeside camp."],
+      ["Day 8", "Chandratal back towards Kinnaur, overnight en route."],
+      ["Day 9", "Return drive to Chandigarh, tour concludes."],
+    ],
+  },
+
+  "kinnaur-valley-tour": {
+    title: "Kinnaur Valley Tour",
+    price: 18999,
+    duration: "6 Days 5 Nights",
+    location: "Kinnaur, HP",
+    group: "2–12 People",
+    season: "May – Oct",
+    hero: "assets/images/kalpa-village.jpg",
+    gallery: ["kalpa-village.jpg", "sangla-valley.jpg", "chitkul-village.jpg", "kaza-spiti.jpg", "mirror-lake.jpg", "hero-kinnaur-valley.jpg"],
+    overview: "Explore the breathtaking Kinnaur Valley, where snow-capped mountains meet blossoming apple orchards and serene, timeless villages. This journey takes you through Kalpa, Sangla and Chitkul — a perfect blend of untouched nature, warm local culture and gentle Himalayan adventure. Wind along the Sutlej and Baspa rivers, savour apple-country hospitality and wake up to the majestic Kinnaur Kailash range at dawn.",
+    highlights: [
+      "Visit Kinnaur Kailash View Point",
+      "Explore picturesque Sangla Valley",
+      "Experience the last village of India – Chitkul",
+      "Stay in comfortable hotels / homestays",
+      "Guided tours and local experiences",
+    ],
+    itinerary: [
+      ["Day 1", "Arrive in Shimla, meet your team, transfer to hotel and enjoy an evening stroll along the Mall Road."],
+      ["Day 2", "Drive to Sarahan via the Sutlej valley; visit the ancient Bhimakali Temple and overnight amid pine forests."],
+      ["Day 3", "Journey to Sangla and on to Chitkul — the last inhabited village near the Indo-Tibet border."],
+      ["Day 4", "Travel to Kalpa; soak in sweeping views of the Kinnaur Kailash range and explore apple orchards."],
+      ["Day 5", "Excursion towards Nako, discovering high-altitude landscapes and centuries-old temples."],
+      ["Day 6", "After breakfast, begin the return drive with a scenic descent and departure with fond memories."],
+    ],
+  },
+
+  "spiti-valley-tour": {
+    title: "Spiti Valley Tour",
+    price: 28999,
+    duration: "6 Days 7 Nights",
+    location: "Spiti, HP",
+    group: "2–10 People",
+    season: "Jun – Sep",
+    hero: "assets/images/kaza-spiti.jpg",
+    gallery: ["kaza-spiti.jpg", "chandratal-lake.jpg", "temple-peak.jpg", "mirror-lake.jpg", "kalpa-village.jpg", "hero-kinnaur-valley.jpg"],
+    overview: "Cross into the stark, cinematic moonscape of Spiti — a high-altitude cold desert of ancient monasteries, whitewashed villages and impossibly blue skies. Visit Key Monastery, the fossil village of Langza, the world's highest post office at Hikkim and the mirror-still Chandratal lake. This is raw Himalaya at its most dramatic, for travellers who want wide horizons and timeless Buddhist culture.",
+    highlights: [
+      "Visit the iconic Key Monastery",
+      "Stand at Hikkim — world's highest post office",
+      "Camp beside the surreal Chandratal Lake",
+      "Explore Langza, Komic & Kibber villages",
+      "Cross high mountain passes above 4,000m",
+    ],
+    itinerary: [
+      ["Day 1", "Depart from Shimla and drive through the Kinnaur valley along the Sutlej, overnight at Sangla."],
+      ["Day 2", "Continue to Kalpa and onward to Nako, acclimatising as the landscape turns arid and dramatic."],
+      ["Day 3", "Enter Spiti — visit Tabo Monastery and its 1,000-year-old murals, overnight at Kaza."],
+      ["Day 4", "Explore Key Monastery, Kibber, Langza, Komic and Hikkim high above the Spiti river."],
+      ["Day 5", "Drive to Chandratal Lake, camp under a blanket of stars at 4,300m."],
+      ["Day 6", "Cross Kunzum Pass and descend towards Manali through Rohtang, tour ends."],
+    ],
+  },
+
+  "kalpa-sangla-chitkul": {
+    title: "Kalpa – Sangla – Chitkul",
+    price: 16999,
+    duration: "5 Days 4 Nights",
+    location: "Kinnaur, HP",
+    group: "2–12 People",
+    season: "Apr – Nov",
+    hero: "assets/images/chitkul-village.jpg",
+    gallery: ["chitkul-village.jpg", "sangla-valley.jpg", "kalpa-village.jpg", "hero-kinnaur-valley.jpg", "mirror-lake.jpg", "temple-peak.jpg"],
+    overview: "A relaxed loop through the greenest corner of Kinnaur — apple orchards, the Baspa river, and the fabled last village of Chitkul. Perfect for a short escape, this trip balances gentle sightseeing with slow mornings in mountain homestays, framed by the ever-present Kinnaur Kailash range.",
+    highlights: [
+      "Wander Chitkul, India's last village",
+      "Riverside walks in the Sangla / Baspa valley",
+      "Sunrise over Kinnaur Kailash from Kalpa",
+      "Visit Kamru Fort and local temples",
+      "Authentic apple-country homestays",
+    ],
+    itinerary: [
+      ["Day 1", "Drive from Shimla to Sarahan, visit Bhimakali Temple, overnight in the pines."],
+      ["Day 2", "Continue to Sangla in the beautiful Baspa valley, evening at leisure."],
+      ["Day 3", "Day trip to Chitkul, the last village near the border; return to Sangla."],
+      ["Day 4", "Travel to Kalpa for grand views of the Kinnaur Kailash range and apple orchards."],
+      ["Day 5", "Scenic return drive to Shimla, tour concludes."],
+    ],
+  },
+
+  "narkanda-hatu-peak": {
+    title: "Narkanda – Hatu Peak",
+    price: 9999,
+    duration: "3 Days 2 Nights",
+    location: "Shimla, HP",
+    group: "2–15 People",
+    season: "All Year",
+    hero: "assets/images/sangla-valley.jpg",
+    gallery: ["sangla-valley.jpg", "temple-peak.jpg", "kalpa-village.jpg", "hero-kinnaur-valley.jpg", "mirror-lake.jpg", "chitkul-village.jpg"],
+    overview: "A quick, refreshing weekend among the apple slopes and cedar forests around Narkanda. Hike to Hatu Peak for panoramic Himalayan views, visit the ancient Hatu Mata temple and enjoy easy nature trails — an ideal first taste of the mountains for families and short-on-time travellers.",
+    highlights: [
+      "Trek to Hatu Peak (3,400m) viewpoint",
+      "Visit the historic Hatu Mata Temple",
+      "Apple-orchard walks around Narkanda",
+      "Easy, family-friendly nature trails",
+      "Great short escape from the city",
+    ],
+    itinerary: [
+      ["Day 1", "Drive from Shimla to Narkanda, evening walk through cedar forests and orchards."],
+      ["Day 2", "Excursion to Hatu Peak and Hatu Mata Temple, panoramic Himalayan views."],
+      ["Day 3", "Morning at leisure, return drive to Shimla, tour ends."],
+    ],
+  },
+
+  "kinnaur-spiti-combo": {
+    title: "Kinnaur – Spiti Combo",
+    price: 35999,
+    duration: "10 Days 9 Nights",
+    location: "Kinnaur & Spiti",
+    group: "2–10 People",
+    season: "Jun – Sep",
+    hero: "assets/images/mirror-lake.jpg",
+    gallery: ["mirror-lake.jpg", "kaza-spiti.jpg", "chandratal-lake.jpg", "chitkul-village.jpg", "kalpa-village.jpg", "temple-peak.jpg"],
+    overview: "The grand circuit — the complete Kinnaur and Spiti loop in one epic journey. From the green apple valleys of Kinnaur to the barren high-desert monasteries of Spiti and the star-lit shores of Chandratal, this is the definitive Himalayan road trip for those who want to see it all.",
+    highlights: [
+      "Full Kinnaur + Spiti circuit in one trip",
+      "Chitkul, Kalpa, Tabo, Kaza & Key Monastery",
+      "Overnight camp at Chandratal Lake",
+      "World's highest post office at Hikkim",
+      "Cross Kunzum & Rohtang passes",
+    ],
+    itinerary: [
+      ["Day 1", "Shimla arrival, briefing and overnight stay."],
+      ["Day 2", "Shimla to Sarahan via the Sutlej valley, visit Bhimakali Temple."],
+      ["Day 3", "Sarahan to Sangla / Chitkul in the Baspa valley."],
+      ["Day 4", "Sangla to Kalpa, Kinnaur Kailash views and apple orchards."],
+      ["Day 5", "Kalpa to Nako via Khab, arid high-mountain scenery."],
+      ["Day 6", "Nako to Kaza, visiting Tabo Monastery en route."],
+      ["Day 7", "Explore Key, Kibber, Langza, Komic and Hikkim."],
+      ["Day 8", "Kaza to Chandratal, overnight camp beside the lake."],
+      ["Day 9", "Chandratal to Manali via Kunzum & Rohtang passes."],
+      ["Day 10", "Departure from Manali with unforgettable memories."],
+    ],
+  },
+
+  "trekking-adventure": {
+    title: "Trekking & Adventure",
+    price: 22999,
+    duration: "5 Days 4 Nights",
+    location: "Himachal Pradesh",
+    group: "4–12 People",
+    season: "May – Oct",
+    hero: "assets/images/temple-peak.jpg",
+    gallery: ["temple-peak.jpg", "chandratal-lake.jpg", "sangla-valley.jpg", "chitkul-village.jpg", "hero-kinnaur-valley.jpg", "mirror-lake.jpg"],
+    overview: "For the restless — a guided high-Himalayan trek combining alpine meadows, glacial streams and ridge-line campsites. Led by experienced mountain guides with full camping support, this adventure is built for fit travellers chasing big views, crisp air and nights under a sky thick with stars.",
+    highlights: [
+      "Guided multi-day Himalayan trek",
+      "Camp in alpine meadows & ridgelines",
+      "Experienced local trek leaders",
+      "All camping gear & meals provided",
+      "Stargazing far from any city light",
+    ],
+    itinerary: [
+      ["Day 1", "Drive to the trek base, gear check and briefing, acclimatisation walk."],
+      ["Day 2", "Trek to the first high camp through pine and rhododendron forest."],
+      ["Day 3", "Ascend to alpine meadows and ridge viewpoints, overnight camp."],
+      ["Day 4", "Summit / high-point day with panoramic Himalayan views, descend to camp."],
+      ["Day 5", "Trek out to road-head and drive back, tour concludes."],
+    ],
+  },
+};
+
+/* slug helper — turn a title into its catalogue key */
+function pkgSlug(title) {
+  return title.toLowerCase()
+    .replace(/&/g, "").replace(/–|—/g, "-")
+    .replace(/[^\w\s-]/g, "").trim()
+    .replace(/\s+/g, "-").replace(/-+/g, "-");
+}
