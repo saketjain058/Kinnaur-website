@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery — Incredible Kinnaur Holidays</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="icon" href="assets/logo/logo.png" type="image/png" />
+</head>
+<body data-page="gallery">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/logo/logo.png" alt="Incredible Kinnaur Holidays logo" />
+        <span class="brand-text">
+          <b>Incredible<br />Kinnaur Holidays</b>
+          <span>Himalayan Journeys, Locally Crafted</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="about.html" data-nav="about">About</a>
+        <a href="packages.html" data-nav="packages">Tour Packages</a>
+        <a href="gallery.html" data-nav="gallery">Gallery</a>
+        <a href="blog.html" data-nav="blog">Blog</a>
+        <a href="contact.html" data-nav="contact">Contact</a>
+      </nav>
+
+      <a href="contact.html" class="btn btn--primary btn--sm">
+        Enquire Now
+        <svg class="arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="nav-toggle btn btn--outline btn--sm" id="navToggle" aria-label="Toggle menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <img class="page-hero__bg" src="assets/images/chitkul-village.jpg" alt="">
+    <div class="page-hero__overlay"></div>
+    <div class="container">
+      <h1>Photo Gallery</h1>
+      <p>Glimpses of the stunning landscapes, vibrant culture and unforgettable moments from our tours.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filters" data-filter-group="#galleryGrid">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="kinnaur">Kinnaur</button>
+        <button class="filter" data-filter="spiti">Spiti</button>
+        <button class="filter" data-filter="villages">Villages</button>
+        <button class="filter" data-filter="adventure">Adventure</button>
+        <button class="filter" data-filter="culture">Culture</button>
+      </div>
+
+      <div class="masonry" id="galleryGrid">
+        <figure data-cat="kinnaur villages culture">
+          <img src="assets/images/kalpa-village.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="kinnaur villages">
+          <img src="assets/images/sangla-valley.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="kinnaur villages">
+          <img src="assets/images/chitkul-village.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="spiti">
+          <img src="assets/images/kaza-spiti.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="spiti adventure">
+          <img src="assets/images/mirror-lake.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="spiti adventure">
+          <img src="assets/images/chandratal-lake.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="kinnaur adventure">
+          <img src="assets/images/hero-kinnaur-valley.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="culture kinnaur">
+          <img src="assets/images/temple-peak.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="kinnaur villages culture">
+          <img src="assets/images/kalpa-village.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="spiti adventure">
+          <img src="assets/images/chandratal-lake.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="kinnaur adventure">
+          <img src="assets/images/hero-kinnaur-valley.jpg" alt="" loading="lazy">
+        </figure>
+        <figure data-cat="culture kinnaur">
+          <img src="assets/images/temple-peak.jpg" alt="" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <img src="assets/logo/logo.png" alt="" style="width:40px;height:40px;" />
+            <span class="brand-text"><b style="color:#fff;">Incredible Kinnaur Holidays</b></span>
+          </a>
+          <p>Explore the untouched beauty of Kinnaur with Incredible Kinnaur Holidays. Your trusted local travel partner in the Himalayas.</p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/incrediblekinnaurholidays" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H18V.2C17.6.1 16.4 0 15.1 0 12.4 0 10.5 1.6 10.5 4.6V6H8v3h2.5v9H14z"/></svg></a>
+            <a href="https://www.instagram.com/incrediblekinnaurholidays" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3 0 4.1.1 1 0 1.7.2 2.3.5.6.2 1.1.5 1.6 1s.8 1 1 1.6c.3.6.4 1.3.5 2.3C21.9 9 22 9.3 22 12s0 3-.1 4.1c0 1-.2 1.7-.5 2.3-.2.6-.5 1.1-1 1.6s-1 .8-1.6 1c-.6.3-1.3.4-2.3.5C15 21.9 14.7 22 12 22s-3 0-4.1-.1c-1 0-1.7-.2-2.3-.5-.6-.2-1.1-.5-1.6-1s-.8-1-1-1.6c-.3-.6-.4-1.3-.5-2.3C2.1 15 2 14.7 2 12s0-3 .1-4.1c0-1 .2-1.7.5-2.3.2-.6.5-1.1 1-1.6s1-.8 1.6-1c.6-.3 1.3-.4 2.3-.5C9 2.1 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.8 6.2a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+            <a href="https://www.youtube.com/@incrediblekinnaurholidays" target="_blank" rel="noopener" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.4-.4-5a2.6 2.6 0 0 0-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.4A2.6 2.6 0 0 0 1.4 7C1 8.6 1 12 1 12s0 3.4.4 5a2.6 2.6 0 0 0 1.8 1.8C4.8 19 12 19 12 19s7.2 0 8.8-.4a2.6 2.6 0 0 0 1.8-1.8c.4-1.6.4-5 .4-5zM9.8 15.3V8.7l6 3.3z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="packages.html">Tour Packages</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+          <h4>Tours</h4>
+          <a href="packages.html">Kinnaur Valley Tour</a>
+          <a href="packages.html">Spiti Valley Tour</a>
+          <a href="packages.html">Kalpa – Sangla – Chitkul</a>
+          <a href="packages.html">Trekking &amp; Adventure</a>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:+918219209660">+91 82192 09660</a><a href="tel:+917018198609">+91 70181 98609</a>
+          <a href="mailto:incrediblekinnaurholidays@gmail.com">incrediblekinnaurholidays@gmail.com</a>
+          <a href="https://www.google.com/maps?q=Reckong+Peo,+Distt+Kinnaur,+Himachal+Pradesh+172108" target="_blank" rel="noopener">Main Office, Near Canara Bank,<br />Reckongpeo, Distt. Kinnaur (H.P.) 172108</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Incredible Kinnaur Holidays. All rights reserved.</span>
+        <span class="footer__legal"><a href="privacy.html">Privacy Policy</a><span class="dot"></span><a href="terms.html">Terms &amp; Conditions</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

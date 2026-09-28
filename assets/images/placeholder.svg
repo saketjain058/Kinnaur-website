@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Placeholder image">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8fb8d6"/>
+      <stop offset="1" stop-color="#cfe3ef"/>
+    </linearGradient>
+    <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c7a6a"/>
+      <stop offset="1" stop-color="#31513f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <polygon points="0,600 180,300 340,470 470,250 620,470 800,320 800,600" fill="url(#mtn)"/>
+  <polygon points="180,300 230,375 130,375" fill="#f4f6f5"/>
+  <polygon points="470,250 528,340 412,340" fill="#f4f6f5"/>
+  <circle cx="660" cy="130" r="46" fill="#f6e7b6"/>
+  <text x="400" y="560" font-family="Inter, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" opacity="0.85">Placeholder image</text>
+</svg>
