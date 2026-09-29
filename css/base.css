@@ -52,7 +52,7 @@ h1, h2, h3, h4 {
   padding-inline: var(--space-5);
 }
 
-.section { padding-block: var(--space-9); }
+.section { padding-block: var(--space-8); }
 
 .eyebrow {
   font-family: var(--font-sans);

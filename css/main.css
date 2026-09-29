@@ -162,6 +162,10 @@
 
 /* ---------- Destinations ---------- */
 .dest-section { background: var(--color-surface-alt); }
+/* Packages (alt bg) sits directly above Destinations (alt bg) — collapse the
+   doubled padding at their shared edge so there's no dead band between them. */
+#packages { padding-bottom: var(--space-5); }
+.dest-section { padding-top: var(--space-6); }
 .dest-grid {
   display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-4);
   margin-top: var(--space-6);

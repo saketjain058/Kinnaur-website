@@ -362,6 +362,8 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .seatmap-hint { text-align: center; font-size: 0.78rem; color: var(--color-muted); margin-top: var(--space-4); }
 
 /* ---------- Ways to travel (home promo) ---------- */
+/* features strip already provides spacing above — trim the doubled gap */
+#ways { padding-top: var(--space-7); }
 .travel-ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
 .travel-way {
   display: flex; flex-direction: column; gap: var(--space-2);
