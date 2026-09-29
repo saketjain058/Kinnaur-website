@@ -10,10 +10,12 @@
 
   // ---- Order data (URL params, with sensible defaults) ----
   const order = {
+    type: params.get("type") || "tour",     // tour | cab | bus
     name: params.get("pkg") || "Kinnaur Valley Tour",
     unit: parseInt(params.get("price") || "18999", 10),
     meta: params.get("meta") || "6 Days 5 Nights · Kinnaur, HP",
     img: params.get("img") || "assets/images/kalpa-village.jpg",
+    qty: parseInt(params.get("qty") || "0", 10),   // fixed qty (cab/bus pass 1)
   };
 
   const INR = (n) => "₹" + n.toLocaleString("en-IN");
@@ -21,8 +23,35 @@
   const $ = (id) => document.getElementById(id);
   const qtyEl = $("travellers");
 
+  // Cab & bus prices are already the FINAL amount (whole cab / all seats),
+  // so the traveller multiplier doesn't apply — lock qty to 1 and relabel.
+  const fixedQty = order.type === "cab" || order.type === "bus";
+  if (fixedQty) {
+    // replace the travellers <select> with a static value + hide its multiplier effect
+    const field = qtyEl.closest(".form-field");
+    if (field) {
+      const label = field.querySelector("label");
+      if (label) label.textContent = order.type === "bus" ? "Passengers" : "Travellers";
+    }
+    // lock select to the passed qty (1) and disable
+    qtyEl.value = "1";
+    qtyEl.disabled = true;
+    // relabel the summary "Travellers" row
+    const qtyRow = $("orderQty") && $("orderQty").closest(".order-row");
+    if (qtyRow) {
+      const lbl = qtyRow.querySelector("span");
+      if (lbl) lbl.textContent = order.type === "bus" ? "Seats/booking" : "Booking";
+    }
+    // relabel "Price / person"
+    const unitRow = $("orderUnit") && $("orderUnit").closest(".order-row");
+    if (unitRow) {
+      const lbl = unitRow.querySelector("span");
+      if (lbl) lbl.textContent = order.type === "bus" ? "Ticket total" : "Cab total";
+    }
+  }
+
   function recalc() {
-    const qty = parseInt(qtyEl.value, 10) || 1;
+    const qty = fixedQty ? 1 : (parseInt(qtyEl.value, 10) || 1);
     const sub = order.unit * qty;
     const tax = Math.round(sub * 0.05);
     const total = sub + tax;

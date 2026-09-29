@@ -238,14 +238,185 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .pay-modal__ref { font-size: 0.85rem; color: var(--color-body); background: var(--color-surface-alt); border-radius: var(--radius-sm); padding: 10px; margin-bottom: var(--space-5); }
 .pay-modal__ref b { font-family: monospace; color: var(--color-primary); }
 
+/* ============================================
+   Cabs page
+   ============================================ */
+/* segmented tabs (Per-Day Hire | Route Tours) */
+.seg-tabs {
+  display: inline-flex; gap: 4px; padding: 4px; margin-bottom: var(--space-6);
+  background: var(--color-surface-alt); border-radius: var(--radius-pill); border: 1px solid var(--color-line);
+}
+.seg-tab {
+  padding: 9px 22px; border-radius: var(--radius-pill); font-size: 0.9rem; font-weight: 600;
+  color: var(--color-muted); transition: background .15s, color .15s; white-space: nowrap;
+}
+.seg-tab.is-active { background: var(--color-primary); color: #fff; }
+
+.hire-layout { display: grid; grid-template-columns: 1.5fr 380px; gap: var(--space-6); align-items: start; }
+.hire-layout > * { min-width: 0; }
+
+.cab-grid { display: grid; gap: var(--space-4); }
+.cab-card {
+  display: flex; gap: var(--space-4); text-align: left; width: 100%;
+  border: 1.5px solid var(--color-line); border-radius: var(--radius-lg); overflow: hidden;
+  background: #fff; transition: border-color .15s, box-shadow .15s; cursor: pointer;
+}
+.cab-card:hover { border-color: var(--color-primary-light); box-shadow: var(--shadow-sm); }
+.cab-card.is-selected { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(31,95,63,0.1); }
+.cab-card__media { position: relative; width: 150px; flex: none; }
+.cab-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.cab-card__tag {
+  position: absolute; top: 8px; left: 8px; font-size: 0.66rem; font-weight: 600;
+  background: rgba(0,0,0,0.6); color: #fff; padding: 3px 8px; border-radius: var(--radius-pill);
+}
+.cab-card__body { padding: var(--space-4); flex: 1; display: flex; flex-direction: column; gap: var(--space-3); }
+.cab-card__row { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
+.cab-card__row b { font-size: 1.05rem; color: var(--color-ink); }
+.cab-card__price { font-family: var(--font-serif); font-weight: 700; font-size: 1.15rem; color: var(--color-primary); }
+.cab-card__price small { font-size: 0.72rem; color: var(--color-muted); font-weight: 500; }
+.cab-card__feats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.cab-card__feats li { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--color-body); }
+.cab-card__feats svg { color: var(--color-success); flex: none; }
+
+.cab-quote .order-row:first-of-type { border-top: none; }
+
+/* route cab tours */
+.cab-route-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); }
+.cab-route { display: flex; flex-direction: column; overflow: hidden; }
+.cab-route__media { position: relative; height: 170px; }
+.cab-route__media img { width: 100%; height: 100%; object-fit: cover; }
+.cab-route__body { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-4); flex: 1; }
+.cab-route__title { font-size: 1.05rem; line-height: 1.35; }
+.cab-route__opts { display: flex; gap: var(--space-2); margin-top: auto; }
+.cab-route__opt {
+  flex: 1; display: flex; flex-direction: column; gap: 2px; align-items: flex-start;
+  border: 1.5px solid var(--color-line); border-radius: var(--radius-md); padding: 10px 12px;
+  transition: border-color .15s, background .15s; text-align: left;
+}
+.cab-route__opt span { font-size: 0.75rem; color: var(--color-muted); }
+.cab-route__opt b { font-family: var(--font-serif); font-size: 1.05rem; color: var(--color-ink); }
+.cab-route__opt.is-active { border-color: var(--color-primary); background: var(--color-surface-tint); }
+.cab-route__opt.is-active b { color: var(--color-primary); }
+
+/* ============================================
+   Bus tickets page
+   ============================================ */
+.bus-search {
+  display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: var(--space-4);
+  align-items: end; padding: var(--space-5); background: #fff;
+  border: 1px solid var(--color-line); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);
+}
+.bus-search .form-field { margin-bottom: 0; }
+.bus-search .btn { height: 46px; }
+
+.bus-result { margin-top: var(--space-6); }
+.bus-result__head {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
+  padding: var(--space-4) var(--space-5); background: var(--color-surface-tint);
+  border-radius: var(--radius-md); margin-bottom: var(--space-5); flex-wrap: wrap;
+}
+.bus-result__head b { display: block; font-size: 1.1rem; color: var(--color-ink); }
+.bus-result__head span { font-size: 0.85rem; color: var(--color-muted); }
+.bus-result__fare { text-align: right; }
+.bus-result__fare span { display: block; font-size: 0.72rem; color: var(--color-muted); }
+.bus-result__fare b { font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-primary); }
+
+.seatmap-layout { display: grid; grid-template-columns: 1fr 380px; gap: var(--space-6); align-items: start; }
+.seatmap-layout > * { min-width: 0; }
+
+.seatmap-wrap {
+  border: 1px solid var(--color-line); border-radius: var(--radius-lg); padding: var(--space-5);
+  background: #fff;
+}
+.seatmap-legend { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-4); font-size: 0.8rem; color: var(--color-muted); }
+.seatmap-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.seat-dot { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+.seat-dot--free { background: #fff; border: 1.5px solid var(--color-line); }
+.seat-dot--sel { background: var(--color-primary); }
+.seat-dot--booked { background: var(--color-line); }
+
+.seatmap {
+  display: flex; flex-direction: column; gap: 8px; align-items: center;
+  width: max-content; max-width: 100%; margin: 0 auto;
+  padding: var(--space-5) var(--space-6); position: relative;
+  border: 2px solid var(--color-line); border-radius: 40px 40px 14px 14px;
+  background: linear-gradient(180deg, var(--color-surface-alt) 0%, #fff 70px);
+}
+/* steering-wheel cue at the front (driver side) */
+.seatmap::before {
+  content: ""; position: absolute; top: 16px; right: 24px;
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 3px solid var(--color-muted); opacity: 0.4;
+}
+.seat-row { display: flex; gap: 8px; align-items: center; }
+.seat-row:first-child { margin-top: var(--space-5); }
+.seat-aisle { width: 22px; }
+.seat {
+  width: 40px; height: 40px; border-radius: var(--radius-sm); font-size: 0.72rem; font-weight: 600;
+  border: 1.5px solid var(--color-line); background: #fff; color: var(--color-body);
+  cursor: pointer; transition: background .12s, border-color .12s, color .12s;
+}
+.seat:hover:not(:disabled) { border-color: var(--color-primary); }
+.seat.is-selected { background: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+.seat.is-booked, .seat:disabled { background: var(--color-line); color: var(--color-muted); cursor: not-allowed; opacity: 0.7; }
+.seatmap-hint { text-align: center; font-size: 0.78rem; color: var(--color-muted); margin-top: var(--space-4); }
+
+/* ---------- Ways to travel (home promo) ---------- */
+.travel-ways { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+.travel-way {
+  display: flex; flex-direction: column; gap: var(--space-2);
+  background: #fff; border: 1px solid var(--color-line); border-radius: var(--radius-lg);
+  padding: var(--space-6); transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.travel-way:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--color-primary-light); }
+.travel-way__ico {
+  width: 52px; height: 52px; border-radius: var(--radius-md); display: grid; place-items: center;
+  background: var(--color-surface-tint); color: var(--color-primary); margin-bottom: var(--space-2);
+}
+.travel-way b { font-size: 1.15rem; color: var(--color-ink); }
+.travel-way > span:not(.travel-way__ico):not(.travel-way__go) { font-size: 0.9rem; color: var(--color-muted); }
+.travel-way__go { margin-top: var(--space-3); font-weight: 600; color: var(--color-primary); font-size: 0.9rem; }
+
+/* per-box themed colours */
+.travel-way--tour {
+  background: linear-gradient(180deg, #f0f6f2 0%, #fff 60%);
+  border-color: #cfe3d6;
+}
+.travel-way--tour .travel-way__ico { background: #1f5f3f; color: #fff; }
+.travel-way--tour:hover { border-color: #1f5f3f; }
+.travel-way--tour .travel-way__go { color: #1f5f3f; }
+
+.travel-way--cab {
+  background: linear-gradient(180deg, #fdf6e8 0%, #fff 60%);
+  border-color: #ecdcb4;
+}
+.travel-way--cab .travel-way__ico { background: #d4972a; color: #fff; }
+.travel-way--cab:hover { border-color: #d4972a; }
+.travel-way--cab .travel-way__go { color: #b57e1c; }
+.travel-way--cab b { color: var(--color-ink); }
+
+.travel-way--bus {
+  background: linear-gradient(180deg, #eef3fb 0%, #fff 60%);
+  border-color: #cddcf1;
+}
+.travel-way--bus .travel-way__ico { background: #2e5aac; color: #fff; }
+.travel-way--bus:hover { border-color: #2e5aac; }
+.travel-way--bus .travel-way__go { color: #2e5aac; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .features__grid { grid-template-columns: repeat(2, 1fr); }
+  .travel-ways { grid-template-columns: 1fr; }
   .pkg-grid--4 { grid-template-columns: 1fr; }
   .detail-grid, .contact-grid, .about-grid, .checkout-grid { grid-template-columns: 1fr; }
   .masonry { columns: 2; }
   .about-stats { grid-template-columns: repeat(2, 1fr); }
   .order-card { position: static; }   /* no sticky once stacked */
+  /* cabs + bus: stack booking column below */
+  .hire-layout, .seatmap-layout { grid-template-columns: 1fr; }
+  .cab-route-grid { grid-template-columns: 1fr; }
+  .bus-search { grid-template-columns: 1fr 1fr; }
+  .bus-search .btn { grid-column: 1 / -1; }
 }
 @media (max-width: 560px) {
   .features__grid { grid-template-columns: 1fr; }
@@ -258,4 +429,15 @@ textarea.form-control { resize: vertical; min-height: 120px; }
   .detail-tabs button { white-space: nowrap; flex: none; }
   .pay-methods { grid-template-columns: 1fr; }   /* stack payment methods on phones */
   .pay-method { padding: 14px; }
+  /* cabs + bus phone tweaks */
+  .cab-card { flex-direction: column; }
+  .cab-card__media { width: 100%; height: 160px; }
+  .cab-card__feats { grid-template-columns: 1fr 1fr; }
+  .bus-search { grid-template-columns: 1fr; }
+  .seg-tabs { display: flex; width: 100%; }
+  .seg-tab { flex: 1; text-align: center; padding: 10px; }
+  /* shrink seats so 2+2 fits narrow screens */
+  .seat { width: 34px; height: 34px; font-size: 0.66rem; }
+  .seat-aisle { width: 16px; }
+  .seat-row { gap: 6px; }
 }

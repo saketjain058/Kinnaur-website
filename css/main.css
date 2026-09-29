@@ -22,13 +22,13 @@
   color: var(--color-ink); display: block; line-height: 1.1;
 }
 .brand-text span {
-  font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--color-muted);
+  font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-muted); display: block; white-space: nowrap;
 }
-.nav { display: flex; align-items: center; gap: var(--space-6); }
+.nav { display: flex; align-items: center; gap: var(--space-5); }
 .nav a {
-  font-size: 0.92rem; font-weight: 500; color: var(--color-body);
-  padding: 6px 0; position: relative;
+  font-size: 0.9rem; font-weight: 500; color: var(--color-body);
+  padding: 6px 0; position: relative; white-space: nowrap;
 }
 .nav a:hover { color: var(--color-primary); }
 .nav a.active { color: var(--color-primary); }

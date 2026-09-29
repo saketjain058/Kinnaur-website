@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Best Time to Visit Spiti Valley &#8212; Incredible Kinnaur Holidays</title>
+  <title>Cab & Taxi Booking — Incredible Kinnaur Holidays</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,7 +14,9 @@
   <link rel="stylesheet" href="css/pages.css" />
   <link rel="icon" href="assets/logo/logo.png" type="image/png" />
 </head>
-<body data-page="blog">
+<body data-page="cabs">
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <a class="brand" href="index.html">
@@ -31,7 +33,6 @@
         <a href="cabs.html" data-nav="cabs">Cabs</a>
         <a href="bus-tickets.html" data-nav="bus">Bus Tickets</a>
         <a href="gallery.html" data-nav="gallery">Gallery</a>
-        <a href="blog.html" data-nav="blog">Blog</a>
         <a href="contact.html" data-nav="contact">Contact</a>
         <a href="contact.html" class="nav-cta">Enquire Now</a>
       </nav>
@@ -44,56 +45,88 @@
     </div>
   </header>
 
-  <section class="article-hero">
-    <img class="article-hero__bg" src="assets/images/kaza-spiti.jpg" alt="" />
-    <div class="article-hero__ov"></div>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <img class="page-hero__bg" src="assets/images/hero-car.jpg" alt="" />
+    <div class="page-hero__overlay"></div>
     <div class="container">
-      <h1>Best Time to Visit Spiti Valley</h1>
-      <div class="meta">
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 7v13h16V7M4 7l2-3h12l2 3M9 11h6"/></svg> Travel Tips</span>
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Jul 28, 2024</span>
-      </div>
+      <h1>Cab &amp; Taxi Booking</h1>
+      <p>Reliable Himalayan cabs with experienced hill drivers — hire per day or book a fixed route tour across Kinnaur &amp; Spiti.</p>
     </div>
   </section>
-  <div class="breadcrumb">
-    <div class="container">
-      <a href="index.html">Home</a>
-      <span class="sep">/</span>
-      <a href="blog.html">Blog</a>
-      <span class="sep">/</span>
-      <span class="current">Best Time to Visit Spiti Valley</span>
-    </div>
-  </div>
 
+  <!-- TABS: Per-day hire | Route tours -->
   <section class="section">
-    <div class="container prose">
-      <p class="lead">Spiti is a cold desert mountain valley with a short travel window. Timing your trip well makes all the difference between a dream journey and a difficult one.</p>
-      <h2>Summer (May &ndash; June)</h2>
-      <p>The most popular season. Roads via Shimla and later Manali open up, days are pleasant and skies are clear. Ideal for first-time visitors.</p>
-      <h2>Monsoon (July &ndash; August)</h2>
-      <p>Spiti lies in a rain-shadow so it stays relatively dry, but the approach roads via Kinnaur can face landslides. Travel with experienced local drivers.</p>
-      <h2>Autumn (September &ndash; October)</h2>
-      <p>A quieter, stunning season &mdash; golden landscapes, fewer crowds and stable weather. A favourite among photographers.</p>
-      <h2>Winter (November &ndash; April)</h2>
-      <p>Spiti turns into a frozen wonderland. Only for well-prepared travelers seeking snow leopards and frozen-river experiences.</p>
-      <figure><img src="assets/images/mirror-lake.jpg" alt="Still high-altitude waters reflect the Spiti sky" loading="lazy" /><figcaption>Still high-altitude waters reflect the Spiti sky</figcaption></figure>
-      <h2>Quick Recommendation</h2>
-      <ul><li>First trip &rarr; May&ndash;June or September</li><li>Photography &rarr; late September&ndash;October</li><li>Snow &amp; adventure &rarr; deep winter, with support</li></ul>
-
-      <div class="article-cta">
-        <h3>Ready to experience it yourself?</h3>
-        <p>Let our local team craft a personalized Kinnaur &amp; Spiti itinerary just for you.</p>
-        <a href="plan-trip.html" class="btn btn--primary">Plan Your Trip <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="container">
+      <div class="seg-tabs" data-cab-tabs>
+        <button class="seg-tab is-active" data-cabtab="hire">Per-Day Hire</button>
+        <button class="seg-tab" data-cabtab="routes">Route Tours</button>
       </div>
 
-      <h2>Continue Reading</h2>
-      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
-        <a href="blog-1.html" class="link-arrow">Top 10 Places to Visit in Kinnaur <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="blog-4.html" class="link-arrow">Chandratal: The Moon Lake of Spiti <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <!-- ===== PER-DAY HIRE ===== -->
+      <div data-cabpanel="hire">
+        <div class="hire-layout">
+          <!-- vehicle chooser -->
+          <div>
+            <h2 class="h-3" style="margin-bottom:16px;">Choose Your Vehicle</h2>
+            <div class="cab-grid" id="cabVehicleGrid"><!-- rendered by cabs.js --></div>
+          </div>
+
+          <!-- booking summary -->
+          <aside>
+            <div class="book-card cab-quote" id="hireQuote">
+              <h3 class="checkout-sec-title">Your Hire</h3>
+              <div class="order-row"><span>Vehicle</span><b id="qVehicle">—</b></div>
+              <div class="form-field" style="margin-top:12px;">
+                <label for="qDays">Number of Days</label>
+                <select class="form-control" id="qDays">
+                  <option value="1">1 Day</option>
+                  <option value="2">2 Days</option>
+                  <option value="3" selected>3 Days</option>
+                  <option value="4">4 Days</option>
+                  <option value="5">5 Days</option>
+                  <option value="6">6 Days</option>
+                  <option value="7">7 Days</option>
+                  <option value="8">8 Days</option>
+                  <option value="10">10 Days</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="qPax">Passengers</label>
+                <select class="form-control" id="qPax">
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="qDate">Start Date</label>
+                <input class="form-control" type="date" id="qDate" />
+              </div>
+              <div class="order-row"><span>Rate / day</span><b class="tnum" id="qRate">—</b></div>
+              <div class="order-row order-total"><span>Total</span><b class="tnum" id="qTotal">—</b></div>
+              <button class="btn btn--primary" id="hireBookBtn" style="width:100%;justify-content:center;margin-top:8px;">
+                Book Cab
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <p class="checkout-secure-note" style="margin-top:12px;">Free cancellation up to 48 hours before pickup.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- ===== ROUTE TOURS ===== -->
+      <div data-cabpanel="routes" hidden>
+        <h2 class="h-3" style="margin-bottom:16px;">Fixed Route Cab Tours</h2>
+        <div class="cab-route-grid" id="cabRouteGrid"><!-- rendered by cabs.js --></div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
@@ -112,19 +145,17 @@
         <div>
           <h4>Quick Links</h4>
           <a href="index.html">Home</a>
-          <a href="about.html">About</a>
           <a href="packages.html">Tour Packages</a>
           <a href="cabs.html">Cab Booking</a>
           <a href="bus-tickets.html">Bus Tickets</a>
           <a href="gallery.html">Gallery</a>
-          <a href="blog.html">Blog</a>
           <a href="contact.html">Contact</a>
         </div>
         <div>
           <h4>Tours</h4>
           <a href="packages.html">Kinnaur Valley Tour</a>
           <a href="packages.html">Spiti Valley Tour</a>
-          <a href="packages.html">Kalpa &#8211; Sangla &#8211; Chitkul</a>
+          <a href="packages.html">Kalpa – Sangla – Chitkul</a>
           <a href="packages.html">Trekking &amp; Adventure</a>
         </div>
         <div>
@@ -135,12 +166,14 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <span>&copy; 2026 Incredible Kinnaur Holidays. All rights reserved.</span>
+        <span>© 2026 Incredible Kinnaur Holidays. All rights reserved.</span>
         <span class="footer__legal"><a href="privacy.html">Privacy Policy</a><span class="dot"></span><a href="terms.html">Terms &amp; Conditions</a></span>
       </div>
     </div>
   </footer>
 
+  <script src="js/cabs-data.js"></script>
+  <script src="js/cabs.js"></script>
   <script src="js/site.js"></script>
 </body>
 </html>
